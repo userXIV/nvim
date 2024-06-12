@@ -10,6 +10,7 @@ Ubuntu:
     sudo apt install zip
     sudo apt install python3.10-venv
     sudo apt install python3-pip
+    sudo apt install npm
 
 If no connectvity:
 
@@ -43,5 +44,9 @@ Ubuntu
     nvm --version
     nvm install node
 
+tmux:
+
+    sudo apt instll tmux
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
     
