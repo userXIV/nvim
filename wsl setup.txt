@@ -1,0 +1,47 @@
+Powershell:
+    wsl --install or wsl --install -d Ubuntu
+
+Ubuntu:
+    sudo apt update && sudo apt upgrade
+    sudo apt install git
+    sudo apt install gh
+    sudo apt install neovim
+    sudo apt-get install build-essential
+    sudo apt install zip
+    sudo apt install python3.10-venv
+    sudo apt install python3-pip
+
+If no connectvity:
+
+Ubuntu
+    sudo tee /etc/wsl.conf << EOF
+    [network]
+    generateResolvConf = false
+    EOF
+
+Powershell
+
+    wsl --shutdown
+
+Ubuntu
+
+    sudo rm -rf /etc/resolv.conf
+    sudo tee /etc/resolv.conf << EOF
+    search yourbase.domain.local
+    nameserver 8.8.8.8
+    nameserver 1.1.1.1
+    EOF
+
+If npm issues:
+
+Ubuntu
+    sudo apt-get remove --purge nodejs npm
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+
+    RESTART
+
+    nvm --version
+    nvm install node
+
+
+    
