@@ -49,4 +49,8 @@ tmux:
     sudo apt instll tmux
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-    
+mypy setup:
+
+    ~/.mypy.ini
+    [mypy]
+    mypy_path = ~/.local/lib/python3.10/site-packages/

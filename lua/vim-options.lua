@@ -1,6 +1,8 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
-vim.cmd("set cursorline")
+vim.opt.cursorline = true
+vim.opt.clipboard = "unnamedplus"
+vim.opt.termguicolors = true
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true
