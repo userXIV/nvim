@@ -28,9 +28,7 @@ return {
             ensure_installed = {
                 "debugpy",
                 "black",
-                "mypy",
                 "stylua",
-
 
             },
         })
@@ -56,6 +54,21 @@ return {
                                 runtime = { version = "Lua 5.1" },
                                 diagnostics = {
                                     globals = { "vim", "it", "describe", "before_each", "after_each" },
+                                },
+                            },
+                        },
+                    })
+                end,
+                ["pyright"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.pyright.setup({
+                        capabilities = capabilities,
+                        settings = {
+                            python = {
+                                analysis = {
+                                    diagnosticSeverityOverrides = {
+                                        reportInvalidTypeForm="none",
+                                    },
                                 },
                             },
                         },

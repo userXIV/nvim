@@ -87,4 +87,16 @@ return {
             -- vim.cmd.colorscheme "evergarden"
         end,
     },
+    {
+        "sho-87/kanagawa-paper.nvim",
+        lazy = false,
+        priority = 1000,
+        config = function ()
+            require("kanagawa-paper").setup({
+                dimInactive = true,
+                commentStyle = { italic = true},
+            })
+            -- vim.cmd.colorscheme "kanagawa-paper"
+        end,
+    },
 }
